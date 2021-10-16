@@ -13,7 +13,7 @@ public class Providers {
     @ColumnInfo(name = "id")
     private int id;
 
-    @ColumnInfo(name = "name")
+    @ColumnInfo(name = "provider_name")
     @NonNull
     private String name;
 
@@ -29,12 +29,13 @@ public class Providers {
     @Ignore
     public Providers() {}
 
+
     public Providers(int id, @NonNull String name, String providersEmailAddress, String providerPhoneNumber, double locationCoordinates) {
         this.id = id;
         this.name = name;
         this.providersEmailAddress = providersEmailAddress;
         this.providerPhoneNumber = providerPhoneNumber;
-        this.locationCoordinates = locationCoordinates;
+        //this.locationCoordinates = locationCoordinates;
     }
 
     public int getId() {
@@ -74,7 +75,7 @@ public class Providers {
         return locationCoordinates;
     }
 
-    public void setLocationCoordinates(double locationCoordinates) {
-        this.locationCoordinates = locationCoordinates;
+    public void setLocationCoordinates(String locationCoordinates) {
+        this.locationCoordinates = Double.parseDouble(locationCoordinates);
     }
 }

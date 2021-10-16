@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -16,6 +18,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity  {
 
+    private static final String EXTRA_MESSAGE = "EXTRA_MESSAGE" ;
     private FloatingActionButton buttonAddProduct;
     private RecyclerView recyclerView;
     static boolean msgShown = false;
@@ -39,6 +42,14 @@ public class MainActivity extends AppCompatActivity  {
         });
 
         getProducts();
+    }
+
+    public void ProviderBtnClicked(View view) {
+        Intent intent = new Intent(this, AddProviderActivity.class);
+////        EditText editText = (EditText) findViewById(R.id.provider);
+//            String message = editText.getText().toString();
+//        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
     }
 
     private void getProducts() {

@@ -44,6 +44,10 @@ public class Product implements Serializable {
     @ColumnInfo(name = "provider_location")
     private String providerLocation;
 
+    public Product() {
+
+    }
+
 
     /*
     * Getters and Setters

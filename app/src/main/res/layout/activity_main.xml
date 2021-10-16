@@ -27,6 +27,7 @@
             android:id="@+id/btnProviders"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="ProviderBtnClicked"
             android:text="Providers" />
 
 
